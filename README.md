@@ -2,7 +2,12 @@
 
 ### Dev server
 ```
+pip install -r requirements.txt
+```
+```
 cd src
+```
+```
 uvicorn index:app --reload
 ```
 
