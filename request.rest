@@ -1,0 +1,44 @@
+### get home
+GET http://localhost:8000 HTTP/1.1
+
+### query param example
+GET http://localhost:8000/redirect?page=146 HTTP/1.1
+
+### get items
+GET http://localhost:8000/items HTTP/1.1
+
+### get single item
+GET http://localhost:8000/items/redApple HTTP/1.1
+
+### get non existing item
+GET http://localhost:8000/items/cucumber HTTP/1.1
+
+### add item
+POST http://localhost:8000/items HTTP/1.1
+Content-Type: application/json
+
+{
+  "value": "🥒"
+}
+
+### update item
+PUT http://localhost:8000/items/redApple HTTP/1.1
+Content-Type: application/json
+
+{
+  "value": "🥒"
+}
+
+### update item error
+PUT http://localhost:8000/items/cucumber HTTP/1.1
+Content-Type: application/json
+
+{
+  "value": "🍎"
+}
+
+### delete item
+DELETE http://localhost:8000/items/redApple HTTP/1.1
+
+### delete item error
+DELETE http://localhost:8000/items/cucumber HTTP/1.1
